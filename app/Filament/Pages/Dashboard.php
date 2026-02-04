@@ -20,4 +20,6 @@ class Dashboard extends Page
             \App\Filament\Widgets\RevenueChart::class,
         ];
     }
+
+    
 }

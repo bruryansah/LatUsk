@@ -14,9 +14,8 @@ class PembelianForm
             ->components([
                 TextInput::make('kode_pembelian')
                     ->disabled(),
-                TextInput::make('produk_id')
-                    ->required()
-                    ->numeric()
+                TextInput::make('produk.nama')
+                    ->label('Produk')
                     ->disabled(),
                 TextInput::make('banyak')
                     ->required()
@@ -26,9 +25,8 @@ class PembelianForm
                     ->required()
                     ->numeric()
                     ->disabled(),
-                TextInput::make('user_id')
-                    ->required()
-                    ->numeric()
+                TextInput::make('user.name')
+                    ->label('User')
                     ->disabled(),
                 Select::make('status')
                     ->options([
