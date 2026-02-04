@@ -16,8 +16,9 @@ class PembeliansTable
             ->columns([
                 TextColumn::make('kode_pembelian')
                     ->searchable(),
-                TextColumn::make('produk_id')
-                    ->numeric()
+                TextColumn::make('produk.nama')
+                    ->label('Produk')
+                    ->searchable()
                     ->sortable(),
                 TextColumn::make('banyak')
                     ->numeric()
@@ -25,8 +26,9 @@ class PembeliansTable
                 TextColumn::make('bayar')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('user_id')
-                    ->numeric()
+                TextColumn::make('user.name')
+                    ->label('User')
+                    ->searchable()
                     ->sortable(),
                 TextColumn::make('status')
                     ->badge(),
